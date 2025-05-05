@@ -1,0 +1,434 @@
+/* ESTILOS GENERALES */
+/* fonts de google */
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
+/* :root etiqueta especifica con estilos base para usar */
+:root{
+    --main-color: #ab70ac;
+    --light-main-color:#ab70ac33;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1)
+}
+
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* heading son los titulos en las secciones */
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.heading h1{
+    font-size:4rem;
+    color: var(--black);
+}
+/* ESTILOS GENERALES */
+/* HEADER */
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
+}
+
+.header .flex .logo img{
+    height: 5rem;
+}
+
+.header .flex .navbar a{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color:var(--black);
+}
+
+.header .flex .navbar a:hover{
+    text-decoration: underline;
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+    font-size: 2.5rem;
+    color:var(--black);
+    cursor: pointer;
+  }
+/* HEADER */
+/* CARRUSEL HOME */
+.home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.home .carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+}
+.home .flickity-prev-next-button:hover {
+    background: var(--main-color);
+    opacity: 0.5;
+}
+.home .flickity-prev-next-button .arrow {
+    fill: white;
+}
+.home .flickity-page-dots {
+    bottom: 30px;
+}
+.home .flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0;
+}
+.home .flickity-page-dots .dot.is-selected {
+    background: var(--main-color);
+    border: 0 solid var(--main-color);
+}
+/* CARRUSEL HOME */
+/* CARDS */
+.cards .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cards .box-container .box{
+    text-align: center;
+}
+.cards .box-container .box img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.cards .box-container .box h3{
+    font-size: 1.9rem;
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
+    padding: 1rem;
+}
+.cards .box-container .box p{
+    font-size: 1.4rem;
+    color: var(--white);
+    background-color: var(--light-color);
+    visibility: hidden;
+    padding: 1rem;
+}
+/* box:hover muestra la info de las cards*/
+.cards .box-container .box:hover img{
+    transform: scale(1.1);
+}
+.cards .box-container .box:hover h3{
+    visibility: visible;
+    transform: scale(1.1);
+}
+.cards .box-container .box:hover p{
+    visibility: visible;
+    transform: scale(1.1);
+}
+/* CARDS */
+
+/* GALERIA - inspo.html */
+.galeria{
+    background-color: #ab70ac0e;
+}
+.galeria h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--light-color);
+    background: var(--light-main-color);
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    font-weight: 400;
+}
+
+.galeria .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    row-gap: 0.7rem;
+    column-gap: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.galeria .box-container .box{
+    text-align: center;
+    margin-top: 2rem;
+}
+.galeria .box-container .box img{
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.galeria .box-container .box p{
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--light-color);
+    background-color: var(--light-main-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    visibility: hidden;
+}
+.galeria .box-container .box:hover img{
+    transform: scale(1.1);
+}
+.galeria .box-container .box:hover p{
+    visibility: visible;
+    transform: scale(1.1);
+}
+/* GALERIA - inspo.html */
+/* CONTACTO - contacto.html */
+.social {
+    text-align: center;
+    margin-top: 4rem;
+}
+.social h3{
+    font-size: 3rem;
+    color: var(--main-color);
+    padding-bottom: 1rem;
+}
+.social p{
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    color: var(--light-color);
+}
+.social ul{
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    color: var(--light-color);
+    list-style: none;
+}
+.social ul li{
+    padding-bottom: 0.5rem;
+}
+.social i{
+    font-size: 2.5rem;
+    line-height: 6rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color:var(--white);
+    margin-bottom: 1rem;
+}
+.social i:hover{
+    text-decoration: none;
+    color: var(--white);
+    background: var(--light-main-color);
+}
+#fs-frm{
+    padding-top: 3rem;
+}
+.contacto {
+    text-align: center;
+    background-color: var(--light-main-color);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.contacto h1{
+    color: var(--black);
+    font-size: 4rem;
+    font-weight: 400;
+}
+.contacto p{
+    color: var(--light-color);
+    padding-top: 1rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--main-color);
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--light-main-color);
+}
+
+/* Contenedor formulario */
+.container {
+    border-radius: 5px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Ambas columnas (social + form) queden una al lado de la otra */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.input {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+/* Cuando la pantalla es menos de 600px de ancho, una columna va arriba de la otra */
+@media screen and (max-width: 600px) {
+
+    .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/* CONTACTO - contact.html */
+/* FOOTER */
+.footer{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    z-index: 1000;
+}
+
+.footer .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 2rem 2rem;
+}
+
+.footer .flex .logo img{
+    height: 5rem;
+}
+
+.footer .flex .navbar a{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color:var(--white);
+}
+
+.footer .flex .navbar a:hover{
+    text-decoration: underline;
+    color:var(--main-color);
+}
+/* FOOTER */
+
+/* media queries / parte responsive*/
+
+@media(max-width:911px){
+    html{
+        font-size: 55%;
+    }
+}
+
+/* cambios en la barra de nav cuando se achica la pantalla */
+@media(max-width:768px){
+    #menu-btn{
+        display:inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .home {
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .home .carousel-cell {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 110%;
+        background-position: center;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
